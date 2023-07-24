@@ -31,7 +31,7 @@
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    max-width: 767px;
   }
 
   .nav-container {
@@ -197,13 +197,13 @@
   .submit-btn {
     margin: unset;
   }
+}
 
-  @media screen and (min-width: 1158px) {
-    .container {
-      max-width: 1158px;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .open-menu-btn {
