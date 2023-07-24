@@ -16,6 +16,7 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
     <header class="header">
@@ -57,6 +58,73 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="open-menu-btn" js-open-menu>
+          <svg width="32" height="22">
+            <use href="./images/icons.svg#icon-charm_menu-hamburger"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu is-hidden" js-menu-container>
+        <button type="button" class="close-menu-btn" js-close-menu>
+          <svg class="btn-close-mob" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="mob-nav-container">
+          <ul class="mob-menu-list list">
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link" href="./index.html">Studio</a>
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link" href="#">Contacts</a>
+            </li>
+          </ul>
+          <ul class="mob-menu-address-list list">
+            <li class="mob-menu-address-item">
+              <a class="mob-menu-tel-link link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mob-menu-address-item">
+              <a
+                class="mob-menu-mail-link link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mob-socials-list list">
+            <li class="mob-socials-item">
+              <a href="" class="mob-socials-item-link"
+                ><svg class="socials-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-instagram"></use></svg
+              ></a>
+            </li>
+            <li class="mob-socials-item">
+              <a href="" class="mob-socials-item-link"
+                ><svg class="socials-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-twitter"></use></svg
+              ></a>
+            </li>
+            <li class="mob-socials-item">
+              <a href="" class="mob-socials-item-link"
+                ><svg class="socials-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-facebook"></use></svg
+              ></a>
+            </li>
+            <li class="mob-socials-item">
+              <a href="" class="mob-socials-item-link"
+                ><svg class="socials-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-linkedin"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -132,6 +200,10 @@
           <ul class="activity-list list">
             <li class="activity-item">
               <img
+                srcset="
+                  ./images/pc-programs.jpg    1x,
+                  ./images/pc-programs-2x.jpg 2x
+                "
                 src="./images/pc-programs.jpg"
                 alt="Programs for PC"
                 width="360"
@@ -140,6 +212,10 @@
             </li>
             <li class="activity-item">
               <img
+                srcset="
+                  ./images/mobile-apps.jpg    1x,
+                  ./images/mobile-apps-2x.jpg 2x
+                "
                 src="./images/mobile-apps.jpg"
                 alt="Mobile Apps"
                 width="360"
@@ -148,6 +224,7 @@
             </li>
             <li class="activity-item">
               <img
+                srcset="./images/graphics.jpg 1x, ./images/graphics-2x.jpg 2x"
                 src="./images/graphics.jpg"
                 alt="Graphics"
                 width="360"
@@ -164,6 +241,7 @@
           <ul class="team-list list">
             <li class="team-item">
               <img
+                srcset="./images/mark.jpg 1x, ./images/mark-2x.jpg 2x"
                 src="./images/mark.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -204,6 +282,7 @@
             </li>
             <li class="team-item">
               <img
+                srcset="./images/tom.jpg 1x, ./images/tom-2x.jpg 2x"
                 src="./images/tom.jpg"
                 alt="Tom Ford"
                 width="264"
@@ -244,6 +323,7 @@
             </li>
             <li class="team-item">
               <img
+                srcset="./images/camila.jpg 1x, ./images/camila-2x.jpg 2x"
                 src="./images/camila.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -284,6 +364,7 @@
             </li>
             <li class="team-item">
               <img
+                srcset="./images/daniel.jpg 1x, ./images/daniel-2x.jpg 2x"
                 src="./images/daniel.jpg"
                 alt="Daniel Wilson"
                 width="264"
@@ -388,7 +469,7 @@
             digital marketing & growth solutions.
           </p>
         </div>
-        <div class="footer-socials-container container">
+        <div class="footer-socials-container">
           <p class="footer-socials-text">Social media</p>
           <ul class="footer-socials-list list">
             <li class="footer-socials-item">
@@ -422,7 +503,7 @@
           </ul>
         </div>
         <div class="footer-contact-form-container">
-          <p class="footer-contact-form-text">Subscribe</p>
+          <p class="footer-socials-text">Subscribe</p>
           <form class="subscribe-form">
             <label
               for="input-email"
@@ -519,7 +600,7 @@
             <label for="user-privacy" class="check-text">
               <span class="check-span">
                 <svg class="check-icon" width="10" height="8">
-                  <use href="./images/icons.svg#icon-click"></use>
+                  <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
               I accept the terms and conditions of the&nbsp;
@@ -531,5 +612,6 @@
       </div>
     </div>
     <script src="./modal.js"></script>
+    <script src="./mobile-menu.js"></script>
   </body>
 </html>
