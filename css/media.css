@@ -11,6 +11,10 @@
     width: 100%;
     min-height: 620px;
   }
+
+  .mail-info {
+    min-width: 300px;
+  }
 }
 
 @media screen and (min-width: 428px) {
