@@ -8,7 +8,8 @@
   }
 
   .modal {
-    width: 300px;
+    width: 100%;
+    min-height: 620px;
   }
 }
 
@@ -113,7 +114,7 @@
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/people-office-tab.jpg);
-    max-width: 768px;
+    padding: 112px 0;
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -146,6 +147,10 @@
     text-align: left;
   }
 
+  .team-container {
+    max-width: 584px;
+  }
+
   .team-list {
     gap: 64px 24px;
   }
@@ -158,6 +163,10 @@
     width: 100%;
   }
 
+  .customers-container {
+    max-width: 584px;
+  }
+
   .customers-list {
     display: flex;
     gap: 72px 24px;
@@ -168,11 +177,10 @@
   }
 
   .footer-container {
-    min-width: 584px;
+    max-width: 584px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
   }
 
   .footer-logo-container {
@@ -327,13 +335,15 @@
     width: calc((100% - 120px) / 6);
   }
 
+  .footer {
+    padding: 100px 0;
+  }
+
   .footer-container {
     display: flex;
     align-items: baseline;
     flex-wrap: unset;
     gap: unset;
-    width: unset;
-    padding: 100px 0;
   }
 
   .footer-logo-container {
@@ -352,6 +362,11 @@
   .footer-contact-form-container {
     margin-left: 80px;
     width: unset;
+  }
+
+  .footer-socials-text {
+    width: 100%;
+    justify-content: left;
   }
 
   .subscribe-form {
