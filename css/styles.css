@@ -48,7 +48,7 @@ img {
   padding: 0 15px;
 }
 
-.logo {
+.header-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -56,8 +56,7 @@ img {
   letter-spacing: 0.03em;
   color: #4d5ae5;
   text-transform: uppercase;
-  list-style-type: none;
-  margin-right: 76px;
+  list-style: none;
   transition: var(--transition);
 }
 
@@ -139,8 +138,7 @@ img {
 
 .header-menu,
 .address-list {
-  display: flex;
-  gap: 40px;
+  display: none;
 }
 
 .header-menu-item {
@@ -150,6 +148,7 @@ img {
 .nav-container {
   display: flex;
   align-items: center;
+  padding: 24px 0;
 }
 
 .hero {
@@ -232,7 +231,7 @@ img {
   background-color: var(--background-color-2);
   align-items: center;
   justify-content: center; */
-  display: flex;
+  display: none;
 }
 
 .benefits-subtitle {
@@ -311,15 +310,24 @@ img {
   margin-bottom: 72px;
 }
 
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+  align-items: center;
+  justify-content: center;
+}
+
 .team-item {
-  display: block;
   background-color: #ffffff;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
-  align-items: center;
-  text-align: center;
   /* width: calc((100% - 72px) / 4); */
+}
+
+.team-item img {
+  margin: 0 auto;
 }
 
 .team-subtitle {
@@ -348,8 +356,6 @@ img {
 .socials-item {
   width: 40px;
   height: 40px;
-  align-items: center;
-  justify-content: center;
 }
 
 .socials-item-link {
@@ -368,14 +374,9 @@ img {
   background-color: var(--hover-color);
 }
 
-.team-list {
-  display: flex;
-  gap: 24px;
-}
-
 .socials-list {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: center;
   gap: 24px;
 }
@@ -388,7 +389,9 @@ img {
   color: var(--headings-color);
   text-align: center;
   font-weight: 700;
+  margin-bottom: 72px;
 }
+
 .team-name {
   padding: 32px 0;
 }
@@ -400,9 +403,10 @@ img {
 
 .customers-list {
   display: flex;
-  gap: 24px;
+  gap: 72px 16px;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .customers-item {
@@ -448,7 +452,6 @@ img {
 .footer {
   background-color: #2e2f42;
   /* padding: 100px 0; */
-  padding: 96px 0;
 }
 
 .footer-container {
@@ -456,12 +459,28 @@ img {
   /* align-items: baseline; */
   justify-content: center;
   flex-wrap: wrap;
-  gap: 72px 24px;
+  gap: 72px;
+  padding: 96px 0;
 }
 
 .footer-logo-container {
-  margin-right: 120px;
-  max-width: 264px;
+  /* margin-right: 120px; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: #4d5ae5;
+  text-transform: uppercase;
+  list-style: none;
+  transition: var(--transition);
+  margin-bottom: 16px;
 }
 
 .footer-logo-text {
@@ -477,11 +496,6 @@ img {
   max-width: 264px;
 }
 
-.footer-container .logo {
-  display: inline-block;
-  margin-bottom: 16px;
-}
-
 .footer-socials-container {
   display: flex;
   flex-direction: column;
@@ -494,7 +508,6 @@ img {
 }
 
 .footer-socials-item {
-  display: flex;
   width: 40px;
   height: 40px;
   justify-content: center;
@@ -515,8 +528,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   transition: background-color var(--transition);
 }
 
@@ -541,7 +554,7 @@ img {
 .footer-contact-form-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
   /* margin-left: 80px; */
   width: 100%;
 }
@@ -586,6 +599,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .submit-btn:hover,
@@ -951,15 +965,17 @@ img {
   height: 100%;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 999;
   pointer-events: none;
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
-  transform: translateX(100%);
-  transition: transform var(--transition);
-  visibility: hidden;
   overflow: auto;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+  transform: translateX(100%);
+  visibility: hidden;
 }
 
 .mob-menu.is-open {
@@ -968,14 +984,11 @@ img {
   visibility: visible;
 }
 .open-menu-btn {
-  width: 24px;
-  height: 24px;
   color: var(--headings-color);
   stroke: currentColor;
   border: none;
   background-color: transparent;
   display: flex;
-  position: absolute;
   top: 24px;
   right: 24px;
   align-items: center;
@@ -1039,6 +1052,9 @@ img {
 }
 
 .mob-menu-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   margin-bottom: 48px;
 }
 
