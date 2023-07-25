@@ -574,6 +574,10 @@ img {
   width: 100%;
 }
 
+.footer-contact-form-container .footer-socials-text {
+  margin-bottom: 0px;
+}
+
 .subscribe-form {
   display: flex;
   flex-direction: column;

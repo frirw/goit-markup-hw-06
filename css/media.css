@@ -224,6 +224,10 @@
   .submit-btn {
     margin: unset;
   }
+
+  .footer-contact-form-container .footer-socials-text {
+    margin-bottom: 0px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
