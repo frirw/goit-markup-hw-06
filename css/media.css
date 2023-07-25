@@ -168,8 +168,11 @@
   }
 
   .footer-container {
-    max-width: 584px;
-    justify-content: unset;
+    min-width: 584px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .footer-logo-container {
@@ -186,12 +189,13 @@
 
   .subscribe-form {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     gap: 24px;
   }
 
   .mail-info {
     width: 264px;
-    margin-bottom: unset;
   }
 
   .submit-btn {
@@ -323,22 +327,18 @@
     width: calc((100% - 120px) / 6);
   }
 
-  .footer {
-    padding: 100px 0;
-    flex-direction: row;
-  }
-
   .footer-container {
     display: flex;
     align-items: baseline;
     flex-wrap: unset;
     gap: unset;
     width: unset;
+    padding: 100px 0;
   }
 
   .footer-logo-container {
     margin-right: 120px;
-    align-items: flex-start;
+    max-width: 264px;
   }
 
   .footer-logo {
