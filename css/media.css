@@ -181,6 +181,15 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .footer-container .footer-logo {
+    text-align: left;
+  }
+
+  .footer-socials-text {
+    width: 100%;
   }
 
   .footer-logo-container {
@@ -200,10 +209,12 @@
     flex-direction: row;
     justify-content: flex-start;
     gap: 24px;
+    width: 100%;
   }
 
   .mail-info {
     width: 264px;
+    min-width: 240px;
   }
 
   .submit-btn {
@@ -335,9 +346,9 @@
     width: calc((100% - 120px) / 6);
   }
 
-  .footer {
+  /* .footer {
     padding: 100px 0;
-  }
+  } */
 
   .footer-container {
     display: flex;
@@ -362,6 +373,10 @@
   .footer-contact-form-container {
     margin-left: 80px;
     width: unset;
+  }
+
+  .footer-contact-form-container .footer-socials-text {
+    margin-bottom: 0px;
   }
 
   .footer-socials-text {
